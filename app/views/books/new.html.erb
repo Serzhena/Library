@@ -1,0 +1,26 @@
+<h3>Новая книга</h3>
+<%= form_for :book, url:books_path do |f| %>
+<p>
+Название<br>
+<%= f.text_field(:name, {:class => 'form-control'})%>
+</p>
+<p>
+Автор<br>
+<%= f.text_field(:author, {:class => 'form-control'})%>
+</p>
+<p>
+Год издания<br>
+<%= f.date_field(:publishingyear, {:class => 'form-control'})%>
+</p>
+<p>
+Издательство<br>
+<%= f.text_field(:publishinghouse, {:class => 'form-control'})%>
+</p>
+<p>
+
+<%= f.submit({:class => 'form-control'})%>
+</p>
+<% end %>
+<!--<%= render 'form', book: @book %>-->
+
+<button type="button" class="btn btn-outline-success"><%= link_to 'Назад', books_path %></button>
